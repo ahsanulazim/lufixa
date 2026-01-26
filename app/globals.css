@@ -9,6 +9,7 @@
   --color-silent-200: hsl(0, 0%, 10%);
   --color-silent-300: hsl(0, 0%, 6%);
   --font-roboto-mono: var(--font-roboto-mono);
+  --font-roboto-flex: var(--font-roboto-flex);
   --breakpoint-xs: 30rem;
 }
 

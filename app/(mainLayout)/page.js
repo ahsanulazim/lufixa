@@ -1,6 +1,10 @@
+import Hero from "@/components/home/Hero"
+
 const page = () => {
     return (
-        <div>page</div>
+        <main>
+            <Hero />
+        </main>
     )
 }
 
