@@ -5,7 +5,7 @@ import { TbAlignRight } from "react-icons/tb";
 const Navbar = () => {
     return (
         <header>
-            <nav className="navbar max-w-360 mx-auto">
+            <nav className="navbar max-w-360 mx-auto px-5">
                 <div className="flex-1">
                     <Link href="/" className="w-fit block"><img src="/assets/logo.svg" alt="logo" /></Link>
                 </div>
