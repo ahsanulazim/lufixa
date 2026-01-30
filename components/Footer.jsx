@@ -4,18 +4,44 @@ import SocialCard from "./ui/SocialCard"
 import Arrowbtn from "./ui/Arrowbtn"
 import footMenus from "@/json/footMenus.json"
 import { LuMail } from "react-icons/lu";
+import { FaBehance, FaDribbble, FaInstagram, FaXTwitter } from "react-icons/fa6"
 
 const Footer = () => {
 
     const links = "link link-hover opacity-50"
+    const socials = [
+        {
+            id: 0,
+            icon: <FaInstagram />,
+            name: "Instagram",
+            description: "Share visually appealing snippets of our latest web projects."
+        },
+        {
+            id: 1,
+            icon: <FaXTwitter />,
+            name: "X",
+            description: "Tweet about interesting coding challenges you've overcome."
+        },
+        {
+            id: 2,
+            icon: <FaDribbble />,
+            name: "Dribbble",
+            description: "Showcase design elements of our web projects."
+        },
+        {
+            id: 3,
+            icon: <FaBehance />,
+            name: "Behance",
+            description: "Create detailed presentations for our projects."
+        }
+    ]
 
     return (
         <Section className="w-full">
             <footer className="grid grid-cols-4 lg:grid-cols-5 grid-rows-5 md:grid-rows-6 gap-5 *:rounded-xl *:p-4 *:md:p-6">
-                <SocialCard className="bg-silent-200 md:row-span-3" />
-                <SocialCard className="bg-silent-200 md:row-span-3" />
-                <SocialCard className="bg-silent-200 md:row-span-3 lg:order-6" />
-                <SocialCard className="bg-silent-200 md:row-span-3 lg:order-7" />
+                {socials.map((social) =>
+                    <SocialCard key={social.id} social={social} className={`bg-silent-200 md:row-span-3 ${social.id === 2 && "lg:order-6"} ${social.id === 3 && "lg:order-7"}`} />
+                )}
                 <div className="bg-silent-200 col-span-4 lg:col-span-3 row-span-4 md:row-span-3 grid grid-cols-2 md:grid-cols-4 md:gap-5 *:gap-3 *:md:gap-5">
                     {footMenus.map((menu) =>
                         <nav className="menu font-roboto-flex" key={menu.id}>
