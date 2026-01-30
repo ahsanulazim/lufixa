@@ -12,6 +12,7 @@ const ServiceMarquee = () => {
             <p className="uppercase">Mobile App Development</p>
             <span className="text-main mx-5">•</span>
             <p className="uppercase">Digital Marketing</p>
+            <span className="text-main mx-5">•</span>
         </Marquee>
     )
 }
