@@ -16,3 +16,25 @@
 .btn-main {
   @apply bg-main text-[#0F0F0F] hover:bg-heading
 }
+
+.shine:before {
+  @apply content-[''] absolute h-full top-0 -left-10 animate-[shining_3s_infinite_linear]
+}
+
+@keyframes shining {
+  0% {
+    left: -40px
+  }
+
+  20% {
+    left: 40px
+  }
+
+  100% {
+    left: 100%
+  }
+}
+
+.shine:before {
+  background-image: linear-gradient(120deg, rgba(255, 255, 255, 0)30%, hsla(14, 52%, 95%, 0.8), rgba(255, 255, 255, 0)70%);
+}

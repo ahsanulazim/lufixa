@@ -1,0 +1,27 @@
+[
+    {
+        "id":0,
+        "countItem":"Clients",
+        "totalCount": "200+"
+    },
+    {
+        "id":1,
+        "countItem":"Projects",
+        "totalCount": "280+"
+    },
+    {
+        "id":2,
+        "countItem":"Happy Clients",
+        "totalCount": "100%"
+    },
+    {
+        "id":3,
+        "countItem":"Follower",
+        "totalCount": "200K"
+    },
+    {
+        "id":4,
+        "countItem":"Years of Experience",
+        "totalCount": "10+"
+    }
+]
