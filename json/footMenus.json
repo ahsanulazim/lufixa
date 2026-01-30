@@ -1,0 +1,22 @@
+[
+    {
+        "id":0,
+        "title":"Home",
+        "submenus":["Why us","About us","Testimonials", "FAQ's"]
+    },
+    {
+        "id":1,
+        "title":"Services",
+        "submenus":["Web Development","App Development","Web Design", "Digital Marketing"]
+    },
+    {
+        "id":2,
+        "title":"Projects",
+        "submenus":["Shajidint","Nexoro","Innovist", "Finpay"]
+    },
+    {
+        "id":3,
+        "title":"Blogs",
+        "submenus":["Business","Design","Development"]
+    }
+]

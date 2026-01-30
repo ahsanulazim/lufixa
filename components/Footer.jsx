@@ -2,6 +2,8 @@ import Link from "next/link"
 import Section from "./layout/Section"
 import SocialCard from "./ui/SocialCard"
 import Arrowbtn from "./ui/Arrowbtn"
+import footMenus from "@/json/footMenus.json"
+import { LuMail } from "react-icons/lu";
 
 const Footer = () => {
 
@@ -15,33 +17,14 @@ const Footer = () => {
                 <SocialCard className="bg-silent-200 md:row-span-3 lg:order-6" />
                 <SocialCard className="bg-silent-200 md:row-span-3 lg:order-7" />
                 <div className="bg-silent-200 col-span-4 lg:col-span-3 row-span-4 md:row-span-3 grid grid-cols-2 md:grid-cols-4 md:gap-5 *:gap-3 *:md:gap-5">
-                    <nav className="menu font-roboto-flex">
-                        <h3 className="font-roboto-mono text-lg text-heading font-semibold">Home</h3>
-                        <Link href="#" className={links}>Why us</Link>
-                        <Link href="#" className={links}>About us</Link>
-                        <Link href="#" className={links}>Testimonials</Link>
-                        <Link href="#" className={links}>FAQ&apos;s</Link>
-                    </nav>
-                    <nav className="menu font-roboto-flex">
-                        <h3 className="font-roboto-mono text-lg text-heading font-semibold">Services</h3>
-                        <Link href="#" className={links}>Web Development</Link>
-                        <Link href="#" className={links}>App Development</Link>
-                        <Link href="#" className={links}>Web Design</Link>
-                        <Link href="#" className={links}>Digital Marketing</Link>
-                    </nav>
-                    <nav className="menu font-roboto-flex">
-                        <h3 className="font-roboto-mono text-lg text-heading font-semibold">Projects</h3>
-                        <Link href="#" className={links}>Shajidint</Link>
-                        <Link href="#" className={links}>Nexoro</Link>
-                        <Link href="#" className={links}>Innovist</Link>
-                        <Link href="#" className={links}>Finpay</Link>
-                    </nav>
-                    <nav className="menu font-roboto-flex">
-                        <h3 className="font-roboto-mono text-lg text-heading font-semibold">Blogs</h3>
-                        <Link href="#" className={links}>Business</Link>
-                        <Link href="#" className={links}>Design <div className="badge bg-silent-50">Soon</div></Link>
-                        <Link href="#" className={links}>Development <div className="badge bg-silent-50">Soon</div></Link>
-                    </nav>
+                    {footMenus.map((menu) =>
+                        <nav className="menu font-roboto-flex" key={menu.id}>
+                            <h3 className="font-roboto-mono text-lg text-heading font-semibold">{menu.title}</h3>
+                            {menu.submenus.map((sub) =>
+                                <Link href="#" key={sub} className={links}>{sub}</Link>
+                            )}
+                        </nav>
+                    )}
                 </div>
                 <div className="bg-silent-200 col-span-4 lg:col-span-3 row-span-2 lg:order-8 flex max-md:flex-col md:items-center md:justify-between gap-5">
                     <div>
@@ -51,18 +34,7 @@ const Footer = () => {
                     <form className="flex-1 flex items-center gap-5 font-roboto-flex">
                         <div className="flex-1">
                             <label className="input validator w-full border-0 border-b rounded-none bg-transparent shadow-none focus-within:outline-0" htmlFor="email">
-                                <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <g
-                                        strokeLinejoin="round"
-                                        strokeLinecap="round"
-                                        strokeWidth="2.5"
-                                        fill="none"
-                                        stroke="currentColor"
-                                    >
-                                        <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-                                    </g>
-                                </svg>
+                                <LuMail className="text-base opacity-50" />
                                 <input className="w-full" type="email" placeholder="Enter your email" name="email" required />
                             </label>
                             <div className="validator-hint hidden">Enter valid email address</div>
