@@ -1,3 +1,5 @@
+import FollowMarquee from "./FollowMarquee"
+import Footer from "./Footer"
 import Navbar from "./Navbar"
 import NavItems from "./NavItems"
 
@@ -10,6 +12,8 @@ const Drawer = ({ children }) => {
                 <Navbar />
                 {/* Page content here */}
                 {children}
+                <FollowMarquee />
+                <Footer />
             </div>
             <div className="drawer-side">
                 <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>

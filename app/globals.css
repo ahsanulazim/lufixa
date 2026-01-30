@@ -5,6 +5,7 @@
   --color-main: hsl(15, 52%, 60%);
   --color-main-light: hsl(14, 52%, 70%);
   --color-heading: hsl(14, 52%, 95%);
+  --color-silent-50: hsl(0, 0%, 20%);
   --color-silent-100: hsl(0, 0%, 12%);
   --color-silent-200: hsl(0, 0%, 10%);
   --color-silent-300: hsl(0, 0%, 6%);
