@@ -17,7 +17,7 @@ const Hero = () => {
                     </div>
                 </div>
                 <div className="hidden lg:block lg:basis-1/3 rounded-xl overflow-hidden">
-                    <img src="/assets/image.jpg" alt="Hero Image" className="scale-102" />
+                    <img src="/assets/hero.jpg" alt="Hero Image" className="scale-102" />
                     <div className="bg-silent-200 p-5">
                         <h3 className="uppercase">Estatein Real Estate</h3>
                         <p className="opacity-50 font-extralight text-sm">Web development</p>
